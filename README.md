@@ -21,7 +21,7 @@ Arch:
 sudo pacman -S neovim
 ```
 
-### 2. Get JetBrainsMono font.
+### 2. Install JetBrainsMono font
 
 ```bash
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/JetBrainsMono.zip
@@ -29,7 +29,7 @@ unzip -o JetBrainsMono.zip -d ~/.local/share/fonts/
 rm JetBrainsMono.zip
 ```
 
-### 3. Install NvChad. 
+### 3. Install NvChad
 
 ```bash
 sudo rm -rf ~/.config/nvim
@@ -38,7 +38,7 @@ sudo rm -rf ~/.cache/nvim
 git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 
 ```
 
-### 4. Install Custom Config.
+### 4. Install Custom Config
 
 ```
 sudo rm -rf ~/.config/nvim/lua/custom
@@ -46,6 +46,6 @@ git clone git@github.com:kikefdezl/neovim-kikefdezl.git ~/.config/nvim/lua/custo
 nvim
 ```
 
-### 5. LSP
+### 5. Install LSP Tools
 
 Install desired tools running `:MasonInstallAll`

@@ -31,7 +31,7 @@ M.mason = {
     "isort",  -- import organizer
 
     -- rust
-    "rust_analyzer"  -- linter
+    "rust-analyzer"  -- linter
   },
 }
 
