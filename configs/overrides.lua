@@ -12,6 +12,7 @@ M.treesitter = {
     "c",
     "markdown",
     "markdown_inline",
+    "json",
   },
   indent = {
     enable = true,
@@ -25,13 +26,16 @@ M.mason = {
     "stylua",
 
     -- python
-    "pyright",  -- lsp
-    "ruff",  -- linter
-    "black",  -- formatter
-    "isort",  -- import organizer
+    "pyright", -- lsp
+    "ruff",    -- linter
+    "black",   -- formatter
+    "isort",   -- import organizer
 
     -- rust
-    "rust-analyzer"  -- linter
+    "rust-analyzer", -- linter
+
+    -- json
+    "json-lsp",
   },
 }
 

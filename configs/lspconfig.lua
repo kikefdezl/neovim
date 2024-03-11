@@ -5,7 +5,7 @@ local capabilities = config.capabilities
 
 local lspconfig = require "lspconfig"
 
-local servers = { "html", "cssls", "tsserver", "clangd", "rust_analyzer", "pyright"}
+local servers = { "html", "cssls", "tsserver", "clangd", "rust_analyzer", "pyright", "jsonls"}
 
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
