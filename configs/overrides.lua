@@ -13,6 +13,7 @@ M.treesitter = {
     "markdown",
     "markdown_inline",
     "json",
+    "yaml"
   },
   indent = {
     enable = true,
@@ -26,16 +27,16 @@ M.mason = {
     "stylua",
 
     -- python
-    "pyright", -- lsp
-    "ruff",    -- linter
-    "black",   -- formatter
-    "isort",   -- import organizer
+    "ruff",
 
     -- rust
-    "rust-analyzer", -- linter
+    "rust-analyzer",
 
     -- json
     "json-lsp",
+
+    -- yaml
+    "yaml-language-server",
   },
 }
 
