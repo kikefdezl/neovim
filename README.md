@@ -35,7 +35,7 @@ rm JetBrainsMono.zip
 sudo rm -rf ~/.config/nvim
 sudo rm -rf ~/.local/share/nvim
 sudo rm -rf ~/.cache/nvim
-git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 
+git clone https://github.com/NvChad/starter ~/.config/nvim --depth 1 
 ```
 
 ### 4. Install Custom Config
