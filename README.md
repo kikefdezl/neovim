@@ -42,7 +42,7 @@ git clone https://github.com/NvChad/starter ~/.config/nvim
 
 ```
 sudo rm -rf ~/.config/nvim
-git clone git@github.com:kikefdezl/neovim-kikefdezl.git ~/.config/nvim
+git clone git@github.com:kikefdezl/neovim.git ~/.config/nvim
 nvim
 ```
 
