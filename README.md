@@ -3,7 +3,7 @@
 
 # Installation
 
-### 1. Install Neovim > 0.8
+### 1. Install Neovim >= 0.10
 
 Ubuntu: 
 
@@ -21,13 +21,22 @@ Arch:
 sudo pacman -S neovim
 ```
 
-### 2. Install JetBrainsMono font
+### 2. Install other requirements
+
+#### 2.1. JetBrainsMono font
 
 ```bash
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/JetBrainsMono.zip
 unzip -o JetBrainsMono.zip -d ~/.local/share/fonts/
 rm JetBrainsMono.zip
 ```
+
+#### 2.2. System Clipboard utility
+
+Required for yanking text in NeoVim to system clipboard
+
+- On X, install `xclip`
+- On Wayland, install `wl-clipboard`
 
 ### 3. Install NvChad
 
