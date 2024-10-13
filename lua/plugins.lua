@@ -13,6 +13,7 @@ require("lazy").setup({
   { "Bilal2453/luvit-meta", lazy = true },
 
   require "plugins.gitsigns",
+  require "plugins.toggleterm",
   require "plugins.which-key",
   require "plugins.telescope",
   require "plugins.lazydev",
