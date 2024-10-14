@@ -1,5 +1,5 @@
 # My Neovim 
-![Screenshot](.thumbnails/screenshot.png)
+![Screenshot](assets/screenshot.png)
 
 # Installation
 
