@@ -1,12 +1,11 @@
 return {
   "stevearc/conform.nvim",
-  event = { "BufWritePre" },
   cmd = { "ConformInfo" },
   keys = {
     {
       "<leader>fm",
       function()
-        require("conform").format { async = true, lsp_format = "fallback" }
+        require("conform").format { async = true }
       end,
       mode = "",
       desc = "[F]or[m]at buffer",
@@ -14,10 +13,11 @@ return {
   },
   opts = {
     notify_on_error = false,
-    format_on_save = false,
     formatters_by_ft = {
       lua = { "stylua" },
-      python = { "isort", "ruff" },
+      python = { "ruff_organize_imports", "ruff_format" },
+      rust = { "rustfmt" },
+      terraform = { "terraform_fmt" },
     },
   },
 }
