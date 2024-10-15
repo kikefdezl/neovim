@@ -71,7 +71,7 @@ return {
     vim.keymap.set("n", "<leader>sk", builtin.keymaps, { desc = "[S]earch [K]eymaps" })
     vim.keymap.set("n", "<leader>ff", builtin.find_files, { desc = "[S]earch [F]iles" })
     vim.keymap.set("n", "<leader>fh", function()
-      builtin.find_files { hidden = true }
+      builtin.find_files { hidden = true, no_ignore = true }
     end, { desc = "[F]ind [H]idden Files" })
     vim.keymap.set("n", "<leader>ss", builtin.builtin, { desc = "[S]earch [S]elect Telescope" })
     vim.keymap.set("n", "<leader>sw", builtin.grep_string, { desc = "[S]earch current [W]ord" })
