@@ -12,6 +12,7 @@ require("lazy").setup({
   "tpope/vim-sleuth",
   { "Bilal2453/luvit-meta", lazy = true },
 
+  require "plugins.comment",
   require "plugins.gitsigns",
   require "plugins.toggleterm",
   require "plugins.which-key",
