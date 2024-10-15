@@ -8,7 +8,7 @@ return {
   },
   cmd = "Neotree",
   keys = {
-    { "<leader>e", ":Neotree toggle<CR>", desc = "NeoTree reveal", silent = true },
+    { "<leader>e", ":Neotree toggle<CR>", desc = "Toggle File [E]xplorer", silent = true },
   },
   opts = {
     filesystem = {
