@@ -41,8 +41,15 @@ Required for yanking text in NeoVim to system clipboard
 
 ### 3. Install Custom Config
 
+(Optional) Remove previous configurations
+```bash
+rm -rf ~/.config/nvim
+rm -rf ~/.local/state/nvim
+rm -rf ~/.local/share/nvim
 ```
-sudo rm -rf ~/.config/nvim
+
+Install:
+```bash
 git clone git@github.com:kikefdezl/neovim.git ~/.config/nvim
 nvim
 ```
