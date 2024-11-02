@@ -18,6 +18,11 @@ return {
       python = { "ruff_organize_imports", "ruff_format" },
       rust = { "rustfmt" },
       terraform = { "terraform_fmt" },
+      json = { "jq" },
+      javascript = { "prettierd" },
+      javascriptreact = { "prettierd" },
+      typescript = { "prettierd" },
+      typescriptreact = { "prettierd" },
     },
   },
 }
