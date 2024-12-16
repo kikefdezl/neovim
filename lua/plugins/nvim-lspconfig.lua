@@ -166,6 +166,9 @@ return {
       -- python
       pyright = {},
 
+      -- rust
+      rust_analyzer = {},
+
       -- terraform
       terraformls = {},
 
