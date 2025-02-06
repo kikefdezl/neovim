@@ -1,11 +1,16 @@
 # My Neovim 
+
+These are the files for my own Neovim configuration, based on [kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim).
+
 ![Screenshot](assets/screenshot.png)
 
 # Installation
 
-### 1. Install Neovim >= 0.10
+### 1. Install Neovim
 
-Ubuntu: 
+Neovim `>=0.10` is required.
+
+##### Ubuntu: 
 
 Install from [Tarball](https://github.com/neovim/neovim/releases/tag/stable)
 
@@ -15,7 +20,7 @@ sudo tar xzvf nvim-linux64.tar.gz -C /opt
 sudo cp /opt/nvim-linux64/bin/nvim /usr/bin/ -s
 ```
 
-Arch:
+##### Arch:
 
 ```bash
 sudo pacman -S neovim
