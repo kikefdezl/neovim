@@ -192,7 +192,7 @@ return {
       },
 
       -- yaml
-      yamlls = {},
+      -- yamlls = {},
       helm_ls = {},
     }
 
