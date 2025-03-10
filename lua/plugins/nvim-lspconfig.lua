@@ -190,6 +190,10 @@ return {
           },
         },
       },
+
+      -- yaml
+      yamlls = {},
+      helm_ls = {},
     }
 
     -- Ensure the servers and tools above are installed
