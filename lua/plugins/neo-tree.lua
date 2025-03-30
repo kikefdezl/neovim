@@ -20,6 +20,8 @@ return {
         mappings = {
           ["\\"] = "close_window",
           ["/"] = "none", -- unsets the fuzzy finder for "/"
+          ["%"] = "add",
+          ["c"] = "copy",
         },
       },
     },
