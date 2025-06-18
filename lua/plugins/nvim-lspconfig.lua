@@ -128,7 +128,7 @@ return {
       basedpyright = {
         settings = {
           basedpyright = {
-            typeCheckingMode = "basic",
+            typeCheckingMode = "standard",
           },
         },
       },
