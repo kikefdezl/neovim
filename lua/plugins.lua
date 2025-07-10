@@ -12,20 +12,21 @@ require("lazy").setup({
   "tpope/vim-sleuth",
   { "Bilal2453/luvit-meta", lazy = true },
 
+  require "plugins.colorscheme",
   require "plugins.comment",
+  require "plugins.conform",
   require "plugins.gitsigns",
-  require "plugins.toggleterm",
-  require "plugins.which-key",
-  require "plugins.telescope",
   require "plugins.lazydev",
   require "plugins.nvim-lspconfig",
-  require "plugins.conform",
   require "plugins.nvim-cmp",
-  require "plugins.todo-comments",
-  require "plugins.colorscheme",
   require "plugins.mini",
-  require "plugins.treesitter",
+  require "plugins.neotest",
   require "plugins.neo-tree",
+  require "plugins.telescope",
+  require "plugins.todo-comments",
+  require "plugins.toggleterm",
+  require "plugins.treesitter",
+  require "plugins.which-key",
 }, {
   ui = {
     icons = vim.g.have_nerd_font and {} or {
