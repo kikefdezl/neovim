@@ -32,7 +32,5 @@ return {
       neotest.run.run(vim.fn.expand("%"))
     end, { desc = "[T]est the entire [f]ile" })
 
-    vim.keymap.set("n", "<leader>ts", function()
-      neotest.summary.toggle()
-    end, { desc = "[T]est [s]ummary" })
+    vim.keymap.set("n", "<leader>ts", neotest.summary.toggle, { desc = "[T]est [s]ummary" })
   end }
