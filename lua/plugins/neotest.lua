@@ -12,15 +12,15 @@ return {
   },
 
   config = function()
-    local neotest = require("neotest")
+    local neotest = require "neotest"
 
-    neotest.setup({
+    neotest.setup {
       adapters = {
         -- also add them here --
-        require("neotest-python"),
-        require("neotest-rust"),
-      }
-    })
+        require "neotest-python",
+        require "neotest-rust",
+      },
+    }
 
     -- keymaps --
     vim.keymap.set("n", "<leader>tr", function()
@@ -28,9 +28,14 @@ return {
       neotest.output.open()
     end, { desc = "[r]un the nearest [t]test" })
 
+    vim.keymap.set("n", "<leader>td", function()
+      neotest.run.run { strategy = "dap" }
+    end, { desc = "[d]ebug the nearest [t]test" })
+
     vim.keymap.set("n", "<leader>tf", function()
-      neotest.run.run(vim.fn.expand("%"))
+      neotest.run.run(vim.fn.expand "%")
     end, { desc = "[T]est the entire [f]ile" })
 
     vim.keymap.set("n", "<leader>ts", neotest.summary.toggle, { desc = "[T]est [s]ummary" })
-  end }
+  end,
+}
