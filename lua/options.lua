@@ -59,5 +59,6 @@ vim.opt.scrolloff = 10
 
 -- Show LSP diagnostics in-line
 vim.diagnostic.config {
-  virtual_text = true,
+  virtual_text = false,
+  virtual_lines = true,
 }
