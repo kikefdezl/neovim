@@ -8,7 +8,7 @@ return {
     "nvim-treesitter/nvim-treesitter",
     -- add required adapters here --
     "nvim-neotest/neotest-python",
-    "rouge8/neotest-rust",
+    "mrcjkb/rustaceanvim",
   },
 
   config = function()
@@ -18,7 +18,7 @@ return {
       adapters = {
         -- also add them here --
         require "neotest-python",
-        require "neotest-rust",
+        require "rustaceanvim.neotest",
       },
     }
 

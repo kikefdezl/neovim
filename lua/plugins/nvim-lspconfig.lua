@@ -134,9 +134,6 @@ return {
       },
       ruff = {},
 
-      -- rust
-      rust_analyzer = {},
-
       -- terraform
       terraformls = {},
 
@@ -160,6 +157,8 @@ return {
       -- yaml
       yamlls = {},
       helm_ls = {},
+
+      -- NOTE: rust is done via the rustaceanvim plugin instead, do not configure here
     }
 
     -- Ensure the servers and tools above are installed
