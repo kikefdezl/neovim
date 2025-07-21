@@ -11,7 +11,6 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
   "tpope/vim-sleuth",
   { "Bilal2453/luvit-meta", lazy = true },
-
   require "plugins.colorscheme",
   require "plugins.comment",
   require "plugins.conform",
@@ -19,10 +18,12 @@ require("lazy").setup({
   require "plugins.lazydev",
   require "plugins.nvim-cmp",
   require "plugins.nvim-dap",
+  require "plugins.nvim-dap-ui",
   require "plugins.nvim-lspconfig",
   require "plugins.mini",
   require "plugins.neotest",
   require "plugins.neo-tree",
+  require "plugins.rustaceanvim",
   require "plugins.telescope",
   require "plugins.todo-comments",
   require "plugins.toggleterm",
