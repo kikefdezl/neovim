@@ -22,7 +22,6 @@ require("lazy").setup({
   require "plugins.nvim-lspconfig",
   require "plugins.mini",
   require "plugins.neotest",
-  require "plugins.neo-tree",
   require "plugins.oil",
   require "plugins.rustaceanvim",
   require "plugins.telescope",
