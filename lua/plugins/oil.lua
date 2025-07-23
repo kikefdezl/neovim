@@ -19,6 +19,7 @@ return {
       },
     }
 
+    vim.keymap.set("n", "-", oil.open)
     vim.keymap.set("n", "<leader>fe", oil.toggle_float)
   end,
 }
