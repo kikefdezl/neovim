@@ -9,7 +9,14 @@ return {
 
   config = function()
     local oil = require "oil"
-    oil.setup()
+    oil.setup {
+      view_options = {
+        show_hidden = false,
+      },
+      keymaps = {
+        ["<leader>h"] = { "actions.toggle_hidden", mode = "n" },
+      },
+    }
 
     vim.keymap.set("n", "<leader>fe", oil.toggle_float)
   end,
