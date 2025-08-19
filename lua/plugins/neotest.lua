@@ -41,5 +41,9 @@ return {
     vim.keymap.set("n", "<leader>to", function()
       neotest.output.open()
     end, { desc = "[o]pen the [t]est output panel" })
+
+    vim.keymap.set("n", "<leader>tc", function()
+      neotest.run.stop()
+    end, { desc = "[c]ancel the nearest [t]est" })
   end,
 }
