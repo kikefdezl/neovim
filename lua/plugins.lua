@@ -11,7 +11,7 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
   "tpope/vim-sleuth",
   { "Bilal2453/luvit-meta", lazy = true },
-  require "plugins.colorscheme",
+  require "plugins.colorschemes.gruvbox-material",
   require "plugins.comment",
   require "plugins.conform",
   require "plugins.gitsigns",

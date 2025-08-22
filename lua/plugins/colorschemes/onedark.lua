@@ -17,8 +17,9 @@ return {
   end,
 
   config = function()
-    require('onedark').setup {
-      style = 'darker'
+    require("onedark").setup {
+      style = "darker",
+      transparent = true
     }
-  end
+  end,
 }
