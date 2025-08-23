@@ -9,7 +9,18 @@ return {
 
     -- Useful status updates for LSP.
     -- NOTE: `opts = {}` is the same as calling `require('fidget').setup({})`
-    { "j-hui/fidget.nvim", opts = {} },
+    {
+      "j-hui/fidget.nvim",
+      -- tag = "v1.6.1",
+      opts = {
+        notification = {
+          override_vim_notify = true,
+          window = {
+            winblend = 0,
+          },
+        },
+      },
+    },
 
     -- Allows extra capabilities provided by nvim-cmp
     "hrsh7th/cmp-nvim-lsp",
