@@ -14,6 +14,7 @@ require("lazy").setup({
   require "plugins.colorschemes.gruvbox-material",
   require "plugins.comment",
   require "plugins.conform",
+  require "plugins.dropbar",
   require "plugins.gitsigns",
   require "plugins.lazydev",
   require "plugins.nvim-cmp",
