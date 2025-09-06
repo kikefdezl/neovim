@@ -12,7 +12,7 @@ return {
     },
   },
   opts = {
-    notify_on_error = false,
+    notify_on_error = true,
     formatters_by_ft = {
       lua = { "stylua" },
       python = { "ruff_organize_imports", "ruff_format" },

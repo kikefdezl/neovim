@@ -157,6 +157,7 @@ return {
 
       -- javascript/typescript
       eslint = {},
+      ts_ls = {},
 
       -- lua
       lua_ls = {
