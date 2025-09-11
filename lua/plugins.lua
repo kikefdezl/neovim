@@ -20,6 +20,7 @@ require("lazy").setup({
   require "plugins.nvim-cmp",
   require "plugins.nvim-dap",
   require "plugins.nvim-dap-ui",
+  require "plugins.nvim-colorizer",
   require "plugins.nvim-lspconfig",
   require "plugins.mini",
   require "plugins.neotest",
