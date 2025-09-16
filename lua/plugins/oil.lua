@@ -10,9 +10,9 @@ return {
   config = function()
     local oil = require "oil"
     oil.setup {
-      default_file_explorer = false,
+      default_file_explorer = true,
       view_options = {
-        show_hidden = false,
+        show_hidden = true,
       },
       keymaps = {
         ["<leader>h"] = { "actions.toggle_hidden", mode = "n" },
