@@ -16,6 +16,7 @@ require("lazy").setup({
   require "plugins.conform",
   require "plugins.dropbar",
   require "plugins.gitsigns",
+  require "plugins.helm-ls",
   require "plugins.lazydev",
   require "plugins.nvim-cmp",
   require "plugins.nvim-dap",

@@ -173,7 +173,7 @@ return {
       -- json
       jq = {},
 
-      -- yaml
+      -- yaml / helm
       yamlls = {},
       helm_ls = {},
 
