@@ -6,3 +6,10 @@ vim.api.nvim_create_autocmd("TextYankPost", {
   end,
 })
 
+-- disable expand tab on Makefiles
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "make",
+  command = "setlocal noexpandtab tabstop=8 shiftwidth=8",
+})
+
+
