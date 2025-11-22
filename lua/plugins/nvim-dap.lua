@@ -1,3 +1,39 @@
+-- Populates a .vscode/launch.json with a Python launch template if it doesn't already exist
+vim.api.nvim_create_user_command("DapCreateLaunchPython", function()
+  local vscode_dir = vim.fn.getcwd() .. "/.vscode"
+  local launch_file = vscode_dir .. "/launch.json"
+
+  if vim.fn.filereadable(launch_file) == 1 then
+    print "launch.json already exists"
+    return
+  end
+
+  vim.fn.mkdir(vscode_dir, "p")
+
+  local template = [[{
+  "configurations": [
+    {
+      "type": "python",
+      "request": "launch",
+      "name": "Debug",
+      "program": "${workspaceFolder}/main.py",
+      "args": [],
+      "env": {
+        "APP_FOO": "bar",
+        "NODE_ENV": "test"
+      },
+      "console": "integratedTerminal"
+    }
+  ]
+}]]
+
+  local f = assert(io.open(launch_file, "w"), "failed to open file")
+  f:write(template)
+  f:close()
+
+  vim.cmd("edit " .. launch_file)
+end, {})
+
 return {
   "mfussenegger/nvim-dap",
   dependencies = {
@@ -35,6 +71,7 @@ return {
         request = "launch",
         name = "file:args",
         program = "${file}",
+
         args = function()
           local args_string = vim.fn.input "Arguments: "
           local utils = require "dap.utils"
