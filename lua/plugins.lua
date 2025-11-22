@@ -9,9 +9,7 @@ end ---@diagnostic disable-next-line: undefined-field
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-  "tpope/vim-sleuth",
-  { "Bilal2453/luvit-meta", lazy = true },
-  require "plugins.colorschemes.gruvbox-material",
+  require "plugins.colorschemes.nordic",
   require "plugins.comment",
   require "plugins.conform",
   require "plugins.dropbar",
@@ -27,6 +25,7 @@ require("lazy").setup({
   require "plugins.neotest",
   require "plugins.oil",
   require "plugins.rustaceanvim",
+  require "plugins.sleuth",
   require "plugins.telescope",
   require "plugins.todo-comments",
   require "plugins.toggleterm",
