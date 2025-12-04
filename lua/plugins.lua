@@ -23,6 +23,7 @@ require("lazy").setup({
   require "plugins.nvim-lspconfig",
   require "plugins.mini",
   require "plugins.neotest",
+  require "plugins.obsidian",
   require "plugins.oil",
   require "plugins.rustaceanvim",
   require "plugins.sleuth",
