@@ -5,10 +5,6 @@ return {
     -- Automatically install LSPs and related tools to stdpath for Neovim
     { "williamboman/mason.nvim", config = true }, -- NOTE: Must be loaded before dependants
     "williamboman/mason-lspconfig.nvim",
-    "WhoIsSethDaniel/mason-tool-installer.nvim",
-
-    -- Useful status updates for LSP.
-    -- NOTE: `opts = {}` is the same as calling `require('fidget').setup({})`
     {
       "j-hui/fidget.nvim",
       -- tag = "v1.6.1",
@@ -22,8 +18,7 @@ return {
       },
     },
 
-    -- Allows extra capabilities provided by nvim-cmp
-    "hrsh7th/cmp-nvim-lsp",
+    "hrsh7th/cmp-nvim-lsp", -- Allows extra capabilities provided by nvim-cmp
   },
   config = function()
     vim.api.nvim_create_autocmd("LspAttach", {
@@ -127,17 +122,8 @@ return {
     local capabilities = vim.lsp.protocol.make_client_capabilities()
     capabilities = vim.tbl_deep_extend("force", capabilities, require("cmp_nvim_lsp").default_capabilities())
 
-    -- Enable the following language servers
-    --  Feel free to add/remove any LSPs that you want here. They will automatically be installed.
-    --
-    --  Add any additional override configuration in the following tables. Available keys are:
-    --  - cmd (table): Override the default command used to start the server
-    --  - filetypes (table): Override the default list of associated filetypes for the server
-    --  - capabilities (table): Override fields in capabilities. Can be used to disable certain LSP features.
-    --  - settings (table): Override the default settings passed when initializing the server.
-    --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
+    -- See `:help lspconfig-all` for a list of all the pre-configured LSPs
     local servers = {
-      -- See `:help lspconfig-all` for a list of all the pre-configured LSPs
 
       -- bash
       bashls = {},
@@ -180,14 +166,6 @@ return {
       -- NOTE: rust is done via the rustaceanvim plugin instead, do not configure here
     }
 
-    -- Ensure the servers and tools above are installed
-    --  To check the current status of installed tools and/or manually install
-    --  other tools, you can run
-    --    :Mason
-    require("mason").setup()
-    -- you can pass ensure_installed = {...} here if you want to make sure they are always there
-    require("mason-tool-installer").setup({})
-
     -- Override the LSP setup with the settings above
     for server, config in pairs(servers) do
       if not vim.tbl_isempty(config) then
@@ -195,8 +173,10 @@ return {
       end
     end
 
+    -- Use :Mason to install the tools above
+    require("mason").setup()
     require("mason-lspconfig").setup {
-      ensure_installed = {}, -- explicitly set to an empty table (Kickstart populates installs via mason-tool-installer above)
+      ensure_installed = { "lua_ls" },
       automatic_enable = true,
     }
   end,
