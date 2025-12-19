@@ -1,7 +1,6 @@
 return {
   "nvim-telescope/telescope.nvim",
   event = "VimEnter",
-  branch = "0.1.x",
   dependencies = {
     "nvim-lua/plenary.nvim",
     {
@@ -15,14 +14,6 @@ return {
     { "nvim-tree/nvim-web-devicons", enabled = vim.g.have_nerd_font },
   },
   config = function()
-    require("telescope").setup {
-      extensions = {
-        ["ui-select"] = {
-          require("telescope.themes").get_dropdown(),
-        },
-      },
-    }
-
     pcall(require("telescope").load_extension, "fzf")
     pcall(require("telescope").load_extension, "ui-select")
 
