@@ -1,3 +1,6 @@
+-- NOTE: With the new "main" default branch, you need to have tree-sitter-cli 
+-- installed in the system, or you get a "nvim-treesitter/compiling/language" message 
+-- on every startup.
 return {
   "nvim-treesitter/nvim-treesitter",
   lazy = false,
