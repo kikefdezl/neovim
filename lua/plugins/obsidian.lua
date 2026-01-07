@@ -1,4 +1,4 @@
-local vault = vim.fn.expand "~" .. "/Obsidian/kike_vault"
+local vault = vim.fn.expand "~" .. "/Obsidian"
 
 return {
   "epwalsh/obsidian.nvim",
