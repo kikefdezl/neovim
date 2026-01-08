@@ -24,5 +24,7 @@ return {
 
       disable_frontmatter = true,
     }
+
+    vim.opt.conceallevel = 2
   end,
 }
