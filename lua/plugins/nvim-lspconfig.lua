@@ -128,23 +128,6 @@ return {
       -- bash
       bashls = {},
 
-      -- python
-      basedpyright = {
-        settings = {
-          basedpyright = {
-            typeCheckingMode = "standard",
-          },
-        },
-      },
-      ruff = {},
-
-      -- terraform
-      terraformls = {},
-
-      -- javascript/typescript
-      eslint = {},
-      ts_ls = {},
-
       -- lua
       lua_ls = {
         settings = {
@@ -158,6 +141,26 @@ return {
 
       -- json
       jq = {},
+
+      -- markdown
+      rumdl = {},
+
+      -- python
+      basedpyright = {
+        settings = {
+          basedpyright = {
+            typeCheckingMode = "standard",
+          },
+        },
+      },
+      ruff = {},
+
+      -- terraform
+      terraformls = {},
+
+      -- typescript
+      biome = {},
+      ts_ls = {},
 
       -- yaml / helm
       yamlls = {},
