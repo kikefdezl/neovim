@@ -20,7 +20,7 @@ return {
       javascriptreact = { "biome" },
       lua = { "stylua" },
       python = { "ruff_organize_imports", "ruff_format" },
-      markdown = { "prettierd" },
+      markdown = { "rumdl" },
       rust = { "rustfmt" },
       terraform = { "terraform_fmt" },
       typescript = { "biome" },
