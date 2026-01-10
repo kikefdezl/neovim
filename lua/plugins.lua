@@ -25,6 +25,7 @@ require("lazy").setup({
   require "plugins.neotest",
   require "plugins.obsidian",
   require "plugins.oil",
+  require "plugins.opencode",
   require "plugins.rustaceanvim",
   require "plugins.sleuth",
   require "plugins.telescope",
