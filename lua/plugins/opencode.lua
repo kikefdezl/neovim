@@ -8,15 +8,15 @@ return {
 
     vim.o.autoread = true
 
-    vim.keymap.set({ "n", "x" }, "<C-a>", function()
+    vim.keymap.set({ "n", "x" }, "<A-a>", function()
       require("opencode").ask("@this: ", { submit = true })
     end, { desc = "[A]sk opencode" })
     vim.keymap.set({ "n", "x" }, "<C-x>", function()
       require("opencode").select()
     end, { desc = "E[x]ecute opencode action…" })
-    vim.keymap.set({ "n", "t" }, "<A-c>", function()
+    vim.keymap.set({ "n", "t" }, "<A-o>", function()
       require("opencode").toggle()
-    end, { desc = "Toggle opencode" })
+    end, { desc = "Toggle [o]pencode" })
 
     vim.keymap.set({ "n", "x" }, "go", function()
       return require("opencode").operator "@this "
