@@ -4,6 +4,10 @@ return {
     { "folke/snacks.nvim", opts = { input = {}, picker = {}, terminal = {} } },
   },
   config = function()
+    vim.env.GOOGLE_APPLICATION_CREDENTIALS = "/home/kike/.gcp/tooling-ai.json"
+    vim.env.GOOGLE_VERTEX_LOCATION = "global"
+    vim.env.GOOGLE_VERTEX_PROJECT = "tooling-ai"
+
     vim.g.opencode_opts = {}
 
     vim.o.autoread = true
