@@ -139,6 +139,9 @@ return {
         },
       },
 
+      -- hypr
+      hypr = {},
+
       -- json
       jq = {},
 
@@ -154,6 +157,7 @@ return {
         },
       },
       ruff = {},
+      ty = {},
 
       -- terraform
       terraformls = {},

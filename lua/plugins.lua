@@ -12,6 +12,7 @@ require("lazy").setup({
   require "plugins.colorschemes.nordic",
   require "plugins.comment",
   require "plugins.conform",
+  require "plugins.diffview",
   require "plugins.dropbar",
   require "plugins.gitsigns",
   require "plugins.helm-ls",
