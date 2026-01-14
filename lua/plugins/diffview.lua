@@ -3,7 +3,7 @@ return {
   dependencies = { "nvim-lua/plenary.nvim" },
 
   config = function()
-    vim.keymap.set("n", "<leader>do", ":DiffviewOpen<CR>")
-    vim.keymap.set("n", "<leader>dc", ":DiffviewClose<CR>")
+    vim.keymap.set("n", "<leader>go", ":DiffviewOpen<CR>")
+    vim.keymap.set("n", "<leader>gq", ":DiffviewClose<CR>")
   end,
 }

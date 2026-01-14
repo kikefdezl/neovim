@@ -32,9 +32,9 @@ return {
     dapui.setup(opts)
 
     -- keymaps
-    vim.keymap.set("n", "<leader>dl", dapui.toggle, { desc = "[D]ebugger togg[l]e" })
+    vim.keymap.set("n", "<leader>dt", dapui.toggle, { desc = "[D]ebugger [t]oggle" })
     vim.keymap.set("n", "<leader>do", dapui.open, { desc = "[D]ebugger [o]pen" })
-    vim.keymap.set("n", "<leader>dc", dapui.close, { desc = "[D]ebugger [c]lose" })
+    vim.keymap.set("n", "<leader>dq", dapui.close, { desc = "[D]ebugger [q]uit" })
 
     -- styling
     vim.cmd "hi DapBreakpointColor guifg=#fa4848"
