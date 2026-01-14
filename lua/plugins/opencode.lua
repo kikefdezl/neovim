@@ -35,8 +35,5 @@ return {
     vim.keymap.set("n", "<S-C-d>", function()
       require("opencode").command "session.half.page.down"
     end, { desc = "opencode half page down" })
-
-    vim.keymap.set("n", "+", "<C-a>", { desc = "Increment", noremap = true })
-    vim.keymap.set("n", "-", "<C-x>", { desc = "Decrement", noremap = true })
   end,
 }
