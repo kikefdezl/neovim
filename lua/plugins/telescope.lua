@@ -40,6 +40,10 @@ return {
       builtin.find_files { cwd = vim.fn.stdpath "config" }
     end, { desc = "[S]earch [N]eovim files" })
 
+    vim.keymap.set("n", "<leader>fo", function()
+      require("lazy").load { plugins = { "obsidian.nvim" } }
+      vim.cmd "ObsidianQuickSwitch"
+    end, { desc = "Obsidian search" })
     vim.keymap.set("n", "<leader>so", function()
       require("lazy").load { plugins = { "obsidian.nvim" } }
       vim.cmd "ObsidianSearch"
