@@ -33,6 +33,7 @@ require("lazy").setup({
   require "plugins.todo-comments",
   require "plugins.toggleterm",
   require "plugins.treesitter",
+  require "plugins.vim-helm",
   require "plugins.which-key",
 }, {
   ui = {
