@@ -149,13 +149,6 @@ return {
       rumdl = {},
 
       -- python
-      basedpyright = {
-        settings = {
-          basedpyright = {
-            typeCheckingMode = "standard",
-          },
-        },
-      },
       ruff = {},
       ty = {},
 
