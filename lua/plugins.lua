@@ -55,5 +55,3 @@ require("lazy").setup({
     },
   },
 })
-
-require "custom.mltop"
