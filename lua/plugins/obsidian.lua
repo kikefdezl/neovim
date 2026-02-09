@@ -3,14 +3,8 @@ local vault = vim.fn.expand "~" .. "/Obsidian"
 return {
   "epwalsh/obsidian.nvim",
   version = "*",
-  lazy = true,
-  ft = "markdown",
+  lazy = false,
   cmd = { "ObsidianSearch" },
-  event = {
-    -- These events are to only load obsidian.nvim when opening files in my vault
-    ("BufReadPre " .. vault .. "/*.md"),
-    ("BufNewFile " .. vault .. "/*.md"),
-  },
   dependencies = { "nvim-lua/plenary.nvim" },
 
   config = function()
@@ -22,9 +16,15 @@ return {
         },
       },
 
+      daily_notes = {
+        folder = "Daily Notes/",
+      },
+
       disable_frontmatter = true,
     }
 
     vim.opt.conceallevel = 2
+
+    vim.keymap.set("n", "<leader>dn", "<cmd>ObsidianToday<CR>", { desc = "Obsidian [d]aily [n]ote" })
   end,
 }

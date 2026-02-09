@@ -1,7 +1,6 @@
 # My Neovim
 
-These are the files for my own Neovim configuration, based on
-[kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim).
+These are the files for my own Neovim configuration.
 
 ![Screenshot](assets/screenshot.png)
 
