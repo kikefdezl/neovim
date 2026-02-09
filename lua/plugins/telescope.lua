@@ -1,3 +1,5 @@
+-- <leader>f is for finding [f]iles
+-- <leader>s is for [s]earching within files
 return {
   "nvim-telescope/telescope.nvim",
   event = "VimEnter",
@@ -44,9 +46,9 @@ return {
     end, { desc = "[S]earch [/] in Open Files" })
 
     -- Neovim
-    vim.keymap.set("n", "<leader>sn", function()
+    vim.keymap.set("n", "<leader>fn", function()
       builtin.find_files { cwd = vim.fn.stdpath "config" }
-    end, { desc = "[S]earch [N]eovim files" })
+    end, { desc = "[F]ind in [N]eovim files" })
 
     -- Dotfiles
     vim.keymap.set("n", "<leader>fd", function()
@@ -54,7 +56,7 @@ return {
         cwd = "~/.dotfiles",
         hidden = true,
       }
-    end, { desc = "[F]ind [D]otfiles" })
+    end, { desc = "[F]ind in [D]otfiles" })
 
     -- Obsidian
     vim.keymap.set("n", "<leader>fo", function()

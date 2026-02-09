@@ -1,30 +1,33 @@
 local vault = vim.fn.expand "~" .. "/Obsidian"
-
 return {
-  "epwalsh/obsidian.nvim",
+  "obsidian-nvim/obsidian.nvim",
   version = "*",
-  lazy = false,
-  cmd = { "ObsidianSearch" },
+  lazy = false, -- Need to load the `leader>dn` shortcut for daily notes from anywhere
   dependencies = { "nvim-lua/plenary.nvim" },
-
-  config = function()
-    require("obsidian").setup {
-      workspaces = {
-        {
-          name = "kike",
-          path = vault,
-        },
+  ---@module 'obsidian'
+  ---@type obsidian.config
+  opts = {
+    workspaces = {
+      {
+        name = "kike",
+        path = vault,
       },
+    },
+    daily_notes = {
+      folder = "Daily Notes/",
+    },
+    legacy_commands = false,
+    frontmatter = {
+      enabled = false,
+    },
+    checkbox = {
+      create_new = false,
+    },
+  },
 
-      daily_notes = {
-        folder = "Daily Notes/",
-      },
-
-      disable_frontmatter = true,
-    }
-
+  config = function(_, opts)
+    require("obsidian").setup(opts)
     vim.opt.conceallevel = 2
-
-    vim.keymap.set("n", "<leader>dn", "<cmd>ObsidianToday<CR>", { desc = "Obsidian [d]aily [n]ote" })
+    vim.keymap.set("n", "<leader>dn", ":Obsidian today<CR>", { desc = "Obsidian [d]aily [n]ote" })
   end,
 }
