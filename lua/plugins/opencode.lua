@@ -1,5 +1,6 @@
 return {
   "NickvanDyke/opencode.nvim",
+  version = "*",
   dependencies = {
     { "folke/snacks.nvim", opts = { input = {}, picker = {}, terminal = {} } },
   },
@@ -9,8 +10,22 @@ return {
     vim.env.GOOGLE_VERTEX_PROJECT = "tooling-ai"
 
     vim.g.opencode_opts = {}
-
     vim.o.autoread = true
+
+    -- System notifications when Opencode is done processing or needs input
+    vim.api.nvim_create_autocmd("User", {
+      pattern = "OpencodeEvent:*",
+      callback = function(args)
+        local event = args.data.event
+        if event.type == "session.idle" then
+          vim.notify("Opencode finished!", vim.log.levels.INFO)
+          vim.fn.system 'notify-send "Opencode" "Done!" --urgency=normal'
+        elseif event.type == "question.asked" then
+          vim.notify("OpenCode is asking a question", vim.log.levels.WARN)
+          vim.fn.system 'notify-send "OpenCode" "Waiting for your input" --urgency=normal'
+        end
+      end,
+    })
 
     -- Your existing keymaps
     vim.keymap.set({ "n", "x" }, "<A-a>", function()
@@ -34,33 +49,5 @@ return {
     vim.keymap.set("n", "<S-C-d>", function()
       require("opencode").command "session.half.page.down"
     end, { desc = "opencode half page down" })
-
-    -- Notification on Opencode finishing
-    vim.api.nvim_create_autocmd("User", {
-      pattern = { "OpencodeEvent", "OpencodeEvent:*" },
-      callback = function(args)
-        local event = args.data and args.data.event
-        if not event then
-          return
-        end
-
-        -- session.idle is the event type that indicates opencode has finished responding
-        if event.type == "session.idle" then
-          vim.notify("Opencode session is idle", vim.log.levels.INFO, { title = "opencode" })
-
-          if vim.fn.executable "notify-send" == 1 then
-            vim.fn.jobstart({
-              "notify-send",
-              "-a",
-              "neovim-opencode",
-              "-u",
-              "low",
-              "Opencode Done!",
-            }, { detach = true })
-          end
-        end
-      end,
-      desc = "Send system notification when Opencode finishes processing",
-    })
   end,
 }
