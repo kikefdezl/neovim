@@ -61,11 +61,11 @@ return {
     -- Obsidian
     vim.keymap.set("n", "<leader>fo", function()
       require("lazy").load { plugins = { "obsidian.nvim" } }
-      vim.cmd "ObsidianQuickSwitch"
+      vim.cmd ":Obsidian quick_switch"
     end, { desc = "[F]ind [O]bsidian file" })
     vim.keymap.set("n", "<leader>so", function()
       require("lazy").load { plugins = { "obsidian.nvim" } }
-      vim.cmd "ObsidianSearch"
+      vim.cmd "Obsidian search"
     end, { desc = "[S]earch [O]bsidian (grep)" })
   end,
 }
