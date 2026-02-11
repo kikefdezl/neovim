@@ -20,7 +20,7 @@ return {
       javascriptreact = { "prettierd" },
       lua = { "stylua" },
       python = { "ruff_organize_imports", "ruff_format" },
-      markdown = { "rumdl" },
+      markdown = { "prettierd"},
       rust = { "rustfmt" },
       terraform = { "terraform_fmt" },
       typescript = { "prettierd" },
