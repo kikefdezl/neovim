@@ -16,6 +16,10 @@ return {
       },
       keymaps = {
         ["<leader>h"] = { "actions.toggle_hidden", mode = "n" },
+        ["<C-h>"] = false,
+        ["<C-l>"] = false,
+        ["<C-k>"] = false,
+        ["<C-j>"] = false,
       },
     }
 
