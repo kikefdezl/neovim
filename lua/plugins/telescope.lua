@@ -28,6 +28,7 @@ return {
     vim.keymap.set("n", "<leader>fh", function()
       builtin.find_files { hidden = true, no_ignore = true }
     end, { desc = "[F]ind [H]idden Files" })
+    vim.keymap.set("n", "<leader>fb", builtin.buffers, { desc = "[F]ind [b]uffers" })
 
     -- search
     vim.keymap.set("n", "<leader>sh", builtin.help_tags, { desc = "[S]earch [H]elp" })
