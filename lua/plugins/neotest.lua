@@ -37,6 +37,7 @@ return {
     end, { desc = "[T]est the entire [f]ile" })
 
     vim.keymap.set("n", "<leader>ts", neotest.summary.toggle, { desc = "[T]est [s]ummary" })
+    vim.keymap.set("n", "<A-t>", neotest.summary.toggle, { desc = "Toggle [t]est panel" })
 
     vim.keymap.set("n", "<leader>to", function()
       neotest.output.open()

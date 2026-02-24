@@ -3,8 +3,8 @@ return {
   dependencies = { "nvim-lua/plenary.nvim" },
 
   config = function()
-    vim.keymap.set("n", "<leader>go", ":DiffviewOpen<CR>")
-    vim.keymap.set("n", "<leader>gq", ":DiffviewClose<CR>")
+    vim.keymap.set("n", "<leader>go", ":DiffviewOpen<CR>", { desc = "[g]it diff [o]pen" })
+    vim.keymap.set("n", "<leader>gq", ":DiffviewClose<CR>", { desc = "[g]it diff [q]uit" })
 
     vim.opt.fillchars = vim.opt.fillchars + "diff:╱"
 
