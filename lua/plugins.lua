@@ -29,7 +29,7 @@ require("lazy").setup({
     require "plugins.oil",
     require "plugins.opencode",
     require "plugins.rustaceanvim",
-    require "plugins.sleuth",
+    require "plugins.guess-indent",
     require "plugins.telescope",
     require "plugins.todo-comments",
     require "plugins.toggleterm",
