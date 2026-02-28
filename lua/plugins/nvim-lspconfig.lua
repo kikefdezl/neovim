@@ -64,6 +64,7 @@ return {
                             vim.lsp.buf.rename(input)
                         end
                     end)
+                    vim.cmd "silent! wa"
                 end, "[R]e[n]ame")
 
                 -- Execute a code action, usually your cursor needs to be on top of an error
