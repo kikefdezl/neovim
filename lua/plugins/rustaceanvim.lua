@@ -4,21 +4,21 @@
 -- long as codelldb is installed.
 
 return {
-  "mrcjkb/rustaceanvim",
-  dependencies = {
-    "mfussenegger/nvim-dap",
-  },
-  version = "^6",
-  lazy = false, -- This plugin is already lazy
-  ft = "rust",
+    "mrcjkb/rustaceanvim",
+    dependencies = {
+        "mfussenegger/nvim-dap",
+    },
+    version = "^6",
+    lazy = false, -- This plugin is already lazy
+    ft = "rust",
 
-  -- NOTE: Requires `rust_analyzer` but the rustup installed one is enough
-  -- so don't install via Mason or you get double diagnostics
+    -- NOTE: Requires `rust_analyzer` but the rustup installed one is enough
+    -- so don't install via Mason or you get double diagnostics
 
-  config = function()
-    return {
-      -- TODO: requires `codelldb`, ensure installed with Mason
-      dap = {},
-    }
-  end,
+    config = function()
+        return {
+            -- TODO: requires `codelldb`, ensure installed with Mason
+            dap = {},
+        }
+    end,
 }

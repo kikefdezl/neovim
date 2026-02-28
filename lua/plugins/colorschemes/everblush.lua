@@ -1,8 +1,8 @@
 return {
-  "Everblush/nvim",
-  name = "everblush",
+    "Everblush/nvim",
+    name = "everblush",
 
-  config = function()
-    vim.cmd "colorscheme everblush"
-  end,
+    config = function()
+        vim.cmd "colorscheme everblush"
+    end,
 }
