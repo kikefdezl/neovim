@@ -49,7 +49,10 @@ return {
         -- Neovim
         vim.keymap.set("n", "<leader>fn", function()
             builtin.find_files { cwd = vim.fn.stdpath "config" }
-        end, { desc = "[F]ind in [N]eovim files" })
+        end, { desc = "[F]ind [N]eovim file" })
+        vim.keymap.set("n", "<leader>sn", function()
+            builtin.live_grep { cwd = vim.fn.stdpath "config" }
+        end, { desc = "[S]earth in [N]eovim files" })
 
         -- Dotfiles
         vim.keymap.set("n", "<leader>fd", function()
