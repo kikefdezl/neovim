@@ -147,7 +147,14 @@ return {
 
             -- python
             ruff = {},
-            ty = {},
+            basedpyright = {
+                settings = {
+                    basedpyright = {
+                        typeCheckingMode = "standard",
+                    },
+                },
+            },
+            -- ty = {},  -- Not as stable/featured as basedpyright yet
 
             -- terraform
             terraformls = {},
