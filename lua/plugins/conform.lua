@@ -22,12 +22,19 @@ return {
             lua = { "stylua" },
             python = { "ruff_organize_imports", "ruff_format" },
             markdown = { "prettierd" },
-            rust = { "rustfmt" },
+            rust = { "rustfmt", lsp_format = "fallback" },
             sh = { "shfmt" },
             shell = { "shfmt" },
             terraform = { "terraform_fmt" },
             typescript = { "prettierd" },
             typescriptreact = { "prettierd" },
+        },
+        formatters = {
+            rustfmt = {
+                options = {
+                    nightly = true,
+                },
+            },
         },
     },
 }
