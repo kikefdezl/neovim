@@ -22,7 +22,7 @@ return {
             lua = { "stylua" },
             python = { "ruff_organize_imports", "ruff_format" },
             markdown = { "prettierd" },
-            rust = { "rustfmt", lsp_format = "fallback" },
+            rust = { "rustfmt" },
             sh = { "shfmt" },
             shell = { "shfmt" },
             terraform = { "terraform_fmt" },
