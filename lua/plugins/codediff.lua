@@ -6,6 +6,9 @@ return {
         { "<leader>go", ":CodeDiff<CR>", desc = "[g]it codediff [o]pen" },
     },
     opts = {
+        explorer = {
+            view_mode = "tree",
+        },
         keymaps = {
             view = {
                 toggle_stage = "s",
