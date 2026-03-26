@@ -7,6 +7,8 @@ return {
             transparent = {
                 bg = false,
             },
+            on_palette = function(_) end,
+            after_palette = function(_) end,
             on_highlight = function(highlights, palette)
                 highlights["@markup.strong"] = {
                     fg = palette.yellow.base,
