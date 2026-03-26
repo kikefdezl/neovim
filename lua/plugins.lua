@@ -28,6 +28,7 @@ require("lazy").setup({
     require "plugins.obsidian",
     require "plugins.oil",
     require "plugins.opencode",
+    require "plugins.render-markdown",
     require "plugins.rustaceanvim",
     require "plugins.guess-indent",
     require "plugins.telescope",
