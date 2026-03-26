@@ -2,7 +2,7 @@ local vault = vim.fn.expand "~" .. "/Obsidian"
 return {
     "obsidian-nvim/obsidian.nvim",
     version = "*",
-    lazy = false, -- Need to load the `leader>dn` shortcut for daily notes from anywhere
+    lazy = false, -- Need to load the `<leader>dn` shortcut for daily notes from anywhere
     dependencies = { "nvim-lua/plenary.nvim" },
     ---@module 'obsidian'
     ---@type obsidian.config
