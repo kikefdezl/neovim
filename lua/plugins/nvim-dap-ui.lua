@@ -39,6 +39,8 @@ return {
         -- styling
         vim.cmd "hi DapBreakpointColor guifg=#fa4848"
         vim.fn.sign_define("DapBreakpoint", { text = " ", texthl = "DapBreakpointColor", linehl = "", numhl = "" })
+        vim.cmd "hi DapStoppedColor guifg=#ffffff"
+        vim.fn.sign_define("DapStopped", { text = " ", texthl = "DapStoppedColor", linehl = "", numhl = "" })
 
         -- autocommands
         dap.listeners.before.attach.dapui_config = function()
