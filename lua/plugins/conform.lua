@@ -17,8 +17,8 @@ return {
             bash = { "shfmt" },
             go = { "gofumpt", "goimports" },
             json = { "jq" },
-            javascript = { "prettierd" },
-            javascriptreact = { "prettierd" },
+            javascript = { "biome" },
+            javascriptreact = { "biome" },
             lua = { "stylua" },
             python = { "ruff_organize_imports", "ruff_format" },
             markdown = { "prettierd" },
@@ -26,8 +26,8 @@ return {
             sh = { "shfmt" },
             shell = { "shfmt" },
             terraform = { "terraform_fmt" },
-            typescript = { "prettierd" },
-            typescriptreact = { "prettierd" },
+            typescript = { "biome" },
+            typescriptreact = { "biome" },
         },
         formatters = {
             rustfmt = {
