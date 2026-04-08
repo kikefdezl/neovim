@@ -12,5 +12,3 @@ require "keymaps"
 -- Autocommands
 require "autocommands"
 
--- Plugins
-require "plugins"

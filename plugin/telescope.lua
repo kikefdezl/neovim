@@ -1,32 +1,30 @@
 -- <leader>f is for finding [f]iles
 -- <leader>s is for [s]earching within files
-return {
-    "nvim-telescope/telescope.nvim",
-    event = "VimEnter",
-    dependencies = {
-        "nvim-lua/plenary.nvim",
-        {
-            "nvim-telescope/telescope-fzf-native.nvim",
-            build = "make",
-            cond = function()
-                return vim.fn.executable "make" == 1
-            end,
-        },
-        { "nvim-telescope/telescope-ui-select.nvim" },
-        { "nvim-tree/nvim-web-devicons", enabled = vim.g.have_nerd_font },
-    },
-    config = function()
+vim.api.nvim_create_autocmd("VimEnter", {
+    callback = function()
+        local plugins = {
+            "https://github.com/nvim-lua/plenary.nvim",
+            "https://github.com/nvim-telescope/telescope-ui-select.nvim",
+            "https://github.com/nvim-tree/nvim-web-devicons",
+            "https://github.com/nvim-telescope/telescope.nvim"
+        }
+        
+        if vim.fn.executable("make") == 1 then
+            table.insert(plugins, 2, "https://github.com/nvim-telescope/telescope-fzf-native.nvim")
+        end
+        
+        vim.pack.add(plugins)
+
         pcall(require("telescope").load_extension, "fzf")
         pcall(require("telescope").load_extension, "ui-select")
 
-        -- See `:help telescope.builtin`
-        local builtin = require "telescope.builtin"
+        local builtin = require("telescope.builtin")
 
         -- find files
         vim.keymap.set("n", "<leader>ff", builtin.find_files, { desc = "[S]earch [F]iles" })
         vim.keymap.set("n", "<leader>fr", builtin.oldfiles, { desc = "[F]ind [R]ecent Files" })
         vim.keymap.set("n", "<leader>fh", function()
-            builtin.find_files { hidden = true, no_ignore = true }
+            builtin.find_files({ hidden = true, no_ignore = true })
         end, { desc = "[F]ind [H]idden Files" })
         vim.keymap.set("n", "<leader>fb", builtin.buffers, { desc = "[F]ind [b]uffers" })
 
@@ -40,36 +38,34 @@ return {
         vim.keymap.set("n", "<leader><leader>", builtin.buffers, { desc = "[ ] Find existing buffers" })
 
         vim.keymap.set("n", "<leader>s/", function()
-            builtin.live_grep {
+            builtin.live_grep({
                 grep_open_files = true,
                 prompt_title = "Live Grep in Open Files",
-            }
+            })
         end, { desc = "[S]earch [/] in Open Files" })
 
         -- Neovim
         vim.keymap.set("n", "<leader>fn", function()
-            builtin.find_files { cwd = vim.fn.stdpath "config" }
+            builtin.find_files({ cwd = vim.fn.stdpath("config") })
         end, { desc = "[F]ind [N]eovim file" })
         vim.keymap.set("n", "<leader>sn", function()
-            builtin.live_grep { cwd = vim.fn.stdpath "config" }
+            builtin.live_grep({ cwd = vim.fn.stdpath("config") })
         end, { desc = "[S]earth in [N]eovim files" })
 
         -- Dotfiles
         vim.keymap.set("n", "<leader>fd", function()
-            builtin.find_files {
+            builtin.find_files({
                 cwd = "~/.dotfiles",
                 hidden = true,
-            }
+            })
         end, { desc = "[F]ind in [D]otfiles" })
 
-        -- Obsidian
+        -- Obsidian (removed lazy.nvim code)
         vim.keymap.set("n", "<leader>fo", function()
-            require("lazy").load { plugins = { "obsidian.nvim" } }
-            vim.cmd ":Obsidian quick_switch"
+            vim.cmd("Obsidian quick_switch")
         end, { desc = "[F]ind [O]bsidian file" })
         vim.keymap.set("n", "<leader>so", function()
-            require("lazy").load { plugins = { "obsidian.nvim" } }
-            vim.cmd "Obsidian search"
+            vim.cmd("Obsidian search")
         end, { desc = "[S]earch [O]bsidian (grep)" })
-    end,
-}
+    end
+})
