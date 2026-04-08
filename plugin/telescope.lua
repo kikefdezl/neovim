@@ -1,3 +1,13 @@
+-- Autocommand to compile fzf-native on install/update
+vim.api.nvim_create_autocmd("PackChanged", {
+    callback = function(ev)
+        if ev.data.spec.name == "telescope-fzf-native.nvim" and vim.fn.executable("make") == 1 then
+            -- wait for pack.add to finish installing so the path exists, though PackChanged after install handles it
+            vim.fn.system({ "make", "-C", vim.fn.stdpath("data") .. "/site/pack/core/opt/telescope-fzf-native.nvim" })
+        end
+    end
+})
+
 -- <leader>f is for finding [f]iles
 -- <leader>s is for [s]earching within files
 vim.api.nvim_create_autocmd("VimEnter", {

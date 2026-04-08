@@ -17,3 +17,5 @@ require("nordic").load {
         }
     end,
 }
+
+vim.cmd.colorscheme("nordic")
