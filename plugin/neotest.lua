@@ -1,4 +1,4 @@
-vim.pack.add({
+vim.pack.add {
     "https://github.com/nvim-lua/plenary.nvim",
     "https://github.com/antoinemadec/FixCursorHold.nvim",
     "https://github.com/nvim-neotest/nvim-nio",
@@ -6,16 +6,16 @@ vim.pack.add({
     "https://github.com/nvim-neotest/neotest-python",
     "https://github.com/mrcjkb/rustaceanvim",
     "https://github.com/nvim-neotest/neotest",
-})
+}
 
-local neotest = require("neotest")
+local neotest = require "neotest"
 
-neotest.setup({
+neotest.setup {
     adapters = {
-        require("neotest-python"),
-        require("rustaceanvim.neotest"),
+        require "neotest-python",
+        require "rustaceanvim.neotest",
     },
-})
+}
 
 -- keymaps --
 vim.keymap.set("n", "<leader>tr", function()
@@ -24,11 +24,11 @@ vim.keymap.set("n", "<leader>tr", function()
 end, { desc = "[r]un the nearest [t]est" })
 
 vim.keymap.set("n", "<leader>td", function()
-    neotest.run.run({ strategy = "dap" })
+    neotest.run.run { strategy = "dap" }
 end, { desc = "[d]ebug the nearest [t]est" })
 
 vim.keymap.set("n", "<leader>tf", function()
-    neotest.run.run(vim.fn.expand("%"))
+    neotest.run.run(vim.fn.expand "%")
 end, { desc = "[T]est the entire [f]ile" })
 
 vim.keymap.set("n", "<leader>ts", neotest.summary.toggle, { desc = "[T]est [s]ummary" })

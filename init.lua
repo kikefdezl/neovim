@@ -11,4 +11,3 @@ require "keymaps"
 
 -- Autocommands
 require "autocommands"
-

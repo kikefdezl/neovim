@@ -1,7 +1,7 @@
 vim.api.nvim_create_autocmd("VimEnter", {
     callback = function()
-        vim.pack.add({ "https://github.com/folke/which-key.nvim" })
-        require("which-key").setup({
+        vim.pack.add { "https://github.com/folke/which-key.nvim" }
+        require("which-key").setup {
             icons = {
                 mappings = vim.g.have_nerd_font,
                 keys = vim.g.have_nerd_font and {} or {
@@ -44,6 +44,6 @@ vim.api.nvim_create_autocmd("VimEnter", {
                 { "<leader>t", group = "[T]oggle" },
                 { "<leader>h", group = "Git [H]unk", mode = { "n", "v" } },
             },
-        })
-    end
+        }
+    end,
 })

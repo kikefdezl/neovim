@@ -1,7 +1,7 @@
-vim.pack.add({
+vim.pack.add {
     "https://github.com/mfussenegger/nvim-dap",
     { src = "https://github.com/mrcjkb/rustaceanvim", version = "^6" },
-})
+}
 
 -- NOTE: rustaceanvim sets up LSP for us, so don't configure it
 -- via nvim-lspconfig as it may cause conflicts.

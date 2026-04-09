@@ -4,7 +4,7 @@ vim.api.nvim_create_user_command("DapCreateLaunchPython", function()
     local launch_file = vscode_dir .. "/launch.json"
 
     if vim.fn.filereadable(launch_file) == 1 then
-        print("launch.json already exists")
+        print "launch.json already exists"
         return
     end
 
@@ -34,12 +34,12 @@ vim.api.nvim_create_user_command("DapCreateLaunchPython", function()
     vim.cmd("edit " .. launch_file)
 end, {})
 
-vim.pack.add({
+vim.pack.add {
     "https://github.com/mfussenegger/nvim-dap-python",
     "https://github.com/mfussenegger/nvim-dap",
-})
+}
 
-local dap = require("dap")
+local dap = require "dap"
 
 -- keymaps
 vim.keymap.set("n", "<leader>b", dap.toggle_breakpoint)
@@ -57,7 +57,7 @@ vim.api.nvim_create_autocmd("VimEnter", {
 })
 
 ----- PYTHON ------
-require("dap-python").setup("uv")
+require("dap-python").setup "uv"
 require("dap").configurations.python = {
     {
         type = "python",
@@ -72,9 +72,9 @@ require("dap").configurations.python = {
         program = "${file}",
 
         args = function()
-            local args_string = vim.fn.input("Arguments: ")
-            local utils = require("dap.utils")
-            if utils.splitstr and vim.fn.has("nvim-0.10") == 1 then
+            local args_string = vim.fn.input "Arguments: "
+            local utils = require "dap.utils"
+            if utils.splitstr and vim.fn.has "nvim-0.10" == 1 then
                 return utils.splitstr(args_string)
             end
             return vim.split(args_string, " +")

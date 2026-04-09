@@ -1,13 +1,13 @@
-vim.pack.add({
+vim.pack.add {
     "https://github.com/mfussenegger/nvim-dap",
     "https://github.com/nvim-neotest/nvim-nio",
     "https://github.com/rcarriga/nvim-dap-ui",
-})
+}
 
-local dap = require("dap")
-local dapui = require("dapui")
+local dap = require "dap"
+local dapui = require "dapui"
 
-dapui.setup({
+dapui.setup {
     layouts = {
         {
             elements = {
@@ -28,7 +28,7 @@ dapui.setup({
             size = 12,
         },
     },
-})
+}
 
 -- keymaps
 vim.keymap.set("n", "<leader>dt", dapui.toggle, { desc = "[D]ebugger [t]oggle" })
@@ -36,9 +36,9 @@ vim.keymap.set("n", "<leader>do", dapui.open, { desc = "[D]ebugger [o]pen" })
 vim.keymap.set("n", "<leader>dq", dapui.close, { desc = "[D]ebugger [q]uit" })
 
 -- styling
-vim.cmd("hi DapBreakpointColor guifg=#fa4848")
+vim.cmd "hi DapBreakpointColor guifg=#fa4848"
 vim.fn.sign_define("DapBreakpoint", { text = " ", texthl = "DapBreakpointColor", linehl = "", numhl = "" })
-vim.cmd("hi DapStoppedColor guifg=#ffffff")
+vim.cmd "hi DapStoppedColor guifg=#ffffff"
 vim.fn.sign_define("DapStopped", { text = " ", texthl = "DapStoppedColor", linehl = "", numhl = "" })
 
 -- autocommands

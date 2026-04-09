@@ -1,11 +1,11 @@
-vim.pack.add({
+vim.pack.add {
     "https://github.com/nvim-tree/nvim-web-devicons",
     "https://github.com/stevearc/oil.nvim",
-})
+}
 
-local oil = require("oil")
+local oil = require "oil"
 
-oil.setup({
+oil.setup {
     default_file_explorer = true,
     view_options = {
         show_hidden = true,
@@ -17,7 +17,7 @@ oil.setup({
         ["<C-k>"] = false,
         ["<C-j>"] = false,
     },
-})
+}
 
 vim.keymap.set("n", "-", oil.open)
 vim.keymap.set("n", "<leader>fe", oil.toggle_float)

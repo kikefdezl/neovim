@@ -18,4 +18,4 @@ require("nordic").load {
     end,
 }
 
-vim.cmd.colorscheme("nordic")
+vim.cmd.colorscheme "nordic"

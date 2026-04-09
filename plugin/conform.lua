@@ -1,6 +1,6 @@
-vim.pack.add({ "https://github.com/stevearc/conform.nvim" })
+vim.pack.add { "https://github.com/stevearc/conform.nvim" }
 
-require("conform").setup({
+require("conform").setup {
     notify_on_error = true,
     formatters_by_ft = {
         bash = { "shfmt" },
@@ -25,8 +25,8 @@ require("conform").setup({
             },
         },
     },
-})
+}
 
 vim.keymap.set({ "n", "v" }, "<leader>fm", function()
-    require("conform").format({ async = true })
+    require("conform").format { async = true }
 end, { desc = "[F]or[m]at buffer" })

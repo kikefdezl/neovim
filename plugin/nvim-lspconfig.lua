@@ -1,19 +1,19 @@
-vim.pack.add({
+vim.pack.add {
     "https://github.com/williamboman/mason.nvim",
     "https://github.com/williamboman/mason-lspconfig.nvim",
     "https://github.com/j-hui/fidget.nvim",
     "https://github.com/hrsh7th/cmp-nvim-lsp",
     "https://github.com/neovim/nvim-lspconfig",
-})
+}
 
-require("fidget").setup({
+require("fidget").setup {
     notification = {
         override_vim_notify = true,
         window = {
             winblend = 0,
         },
     },
-})
+}
 
 vim.api.nvim_create_autocmd("LspAttach", {
     group = vim.api.nvim_create_augroup("kickstart-lsp-attach", { clear = true }),
@@ -60,14 +60,14 @@ vim.api.nvim_create_autocmd("LspAttach", {
                 group = vim.api.nvim_create_augroup("kickstart-lsp-detach", { clear = true }),
                 callback = function(event2)
                     vim.lsp.buf.clear_references()
-                    vim.api.nvim_clear_autocmds({ group = "kickstart-lsp-highlight", buffer = event2.buf })
+                    vim.api.nvim_clear_autocmds { group = "kickstart-lsp-highlight", buffer = event2.buf }
                 end,
             })
         end
 
         if client and client:supports_method(vim.lsp.protocol.Methods.textDocument_inlayHint) then
             map("<leader>th", function()
-                vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled({ bufnr = event.buf }))
+                vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled { bufnr = event.buf })
             end, "[T]oggle Inlay [H]ints")
         end
     end,
@@ -112,7 +112,7 @@ for server, config in pairs(servers) do
 end
 
 require("mason").setup()
-require("mason-lspconfig").setup({
+require("mason-lspconfig").setup {
     ensure_installed = { "lua_ls" },
     automatic_enable = true,
-})
+}
