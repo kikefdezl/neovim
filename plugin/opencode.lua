@@ -6,7 +6,6 @@ vim.pack.add {
 }
 
 -- Dependencies setup
-require("snacks").setup { input = {}, picker = {}, terminal = {} }
 require("render-markdown").setup {
     anti_conceal = { enabled = false },
     file_types = { "markdown", "opencode_output" },
