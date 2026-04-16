@@ -2,7 +2,6 @@ vim.pack.add {
     "https://github.com/williamboman/mason.nvim",
     "https://github.com/williamboman/mason-lspconfig.nvim",
     "https://github.com/j-hui/fidget.nvim",
-    "https://github.com/hrsh7th/cmp-nvim-lsp",
     "https://github.com/neovim/nvim-lspconfig",
 }
 
@@ -73,9 +72,6 @@ vim.api.nvim_create_autocmd("LspAttach", {
     end,
 })
 
-local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities = vim.tbl_deep_extend("force", capabilities, require("cmp_nvim_lsp").default_capabilities())
-
 local servers = {
     bashls = {},
     lua_ls = {
@@ -87,17 +83,11 @@ local servers = {
             },
         },
     },
-    hypr = {},
+    hyprls = {},
     jq = {},
     rumdl = {},
     ruff = {},
-    basedpyright = {
-        settings = {
-            basedpyright = {
-                typeCheckingMode = "standard",
-            },
-        },
-    },
+    ty = {},
     terraformls = {},
     biome = {},
     ts_ls = {},
@@ -113,6 +103,6 @@ end
 
 require("mason").setup()
 require("mason-lspconfig").setup {
-    ensure_installed = { "lua_ls" },
+    ensure_installed = { "lua_ls", "bashls", "yamlls", "ruff", "ts_ls", "hyprls", "ty", "terraformls", "helm_ls" },
     automatic_enable = true,
 }
