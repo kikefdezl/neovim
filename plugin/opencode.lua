@@ -14,6 +14,7 @@ require("render-markdown").setup {
 -- Opencode setup
 vim.o.autoread = true
 
+vim.fn.setenv("OPENCODE_EXPERIMENTAL", "true")
 require("opencode").setup {
     keymap = {
         editor = {
