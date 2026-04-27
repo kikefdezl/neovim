@@ -10,9 +10,23 @@ vim.pack.add {
 
 local neotest = require "neotest"
 
+-- Neotest Python's internal logic uses this method to find the root and cwd
+-- We must override it so it looks for the uv monorepo root instead of the
+-- first pyproject.toml it encounters in the sub-packages.
+require("neotest-python.base").get_root = function(path)
+    return require("neotest.lib").files.match_root_pattern("uv.lock", ".git")(path)
+end
+
+local python_adapter = require "neotest-python" {
+    -- Point to the venv at the monorepo root using absolute paths to avoid cwd issues
+    python = function(root)
+        return root .. "/.venv/bin/python"
+    end,
+}
+
 neotest.setup {
     adapters = {
-        require "neotest-python",
+        python_adapter,
         require "rustaceanvim.neotest",
     },
 }

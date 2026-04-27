@@ -72,8 +72,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
     end,
 })
 
-local servers = {
-    bashls = {},
+local server_configs = {
     lua_ls = {
         settings = {
             Lua = {
@@ -83,19 +82,9 @@ local servers = {
             },
         },
     },
-    hyprls = {},
-    jq = {},
-    rumdl = {},
-    ruff = {},
-    ty = {},
-    terraformls = {},
-    biome = {},
-    ts_ls = {},
-    yamlls = {},
-    helm_ls = {},
 }
 
-for server, config in pairs(servers) do
+for server, config in pairs(server_configs) do
     if not vim.tbl_isempty(config) then
         vim.lsp.config(server, config)
     end
@@ -103,6 +92,6 @@ end
 
 require("mason").setup()
 require("mason-lspconfig").setup {
-    ensure_installed = { "lua_ls", "bashls", "yamlls", "ruff", "ts_ls", "hyprls", "ty", "terraformls", "helm_ls" },
+    ensure_installed = { "lua_ls", "bashls", "yamlls", "ruff", "ts_ls", "hyprls", "terraformls", "helm_ls" },
     automatic_enable = true,
 }
