@@ -2,7 +2,7 @@ vim.pack.add {
     "https://github.com/rafamadriz/friendly-snippets",
     {
         src = "https://github.com/saghen/blink.cmp",
-        version = "main",
+        version = "v1",
     },
 }
 
