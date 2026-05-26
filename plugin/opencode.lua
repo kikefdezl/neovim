@@ -5,13 +5,6 @@ vim.pack.add {
     "https://github.com/sudo-tee/opencode.nvim",
 }
 
--- Dependencies setup
-require("render-markdown").setup {
-    anti_conceal = { enabled = false },
-    file_types = { "markdown", "opencode_output" },
-}
-
--- Opencode setup
 vim.o.autoread = true
 
 vim.fn.setenv("OPENCODE_EXPERIMENTAL", "true")
