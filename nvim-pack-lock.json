@@ -18,7 +18,7 @@
       "version": "'v1'"
     },
     "blink.lib": {
-      "rev": "f29d8bac6549bc1e7d699c83f680823d7def98bd",
+      "rev": "b127d48bf8e9ac9cf41f6e0fbead317503f76558",
       "src": "https://github.com/saghen/blink.lib"
     },
     "cmp-nvim-lsp": {
@@ -34,7 +34,7 @@
       "src": "https://github.com/saadparwaiz1/cmp_luasnip"
     },
     "codediff.nvim": {
-      "rev": "76ff1b13f0bcba655dca85cea1ef0df877a53c0f",
+      "rev": "5d6aa753797a0ebda14dd769ed03d12a320d689b",
       "src": "https://github.com/esmuellert/codediff.nvim"
     },
     "conform.nvim": {
@@ -42,7 +42,7 @@
       "src": "https://github.com/stevearc/conform.nvim"
     },
     "dropbar.nvim": {
-      "rev": "f0a42bd92aa647e44221397723453403f5e20f16",
+      "rev": "808ba31cde89aec8833e9789f5e04557cd31c9e1",
       "src": "https://github.com/Bekaboo/dropbar.nvim"
     },
     "fidget.nvim": {
@@ -54,11 +54,11 @@
       "src": "https://github.com/rafamadriz/friendly-snippets"
     },
     "gitsigns.nvim": {
-      "rev": "dd3f588bacbeb041be6facf1742e42097f62165d",
+      "rev": "25050e4ed39e628282831d4cbecb1850454ce915",
       "src": "https://github.com/lewis6991/gitsigns.nvim"
     },
     "gruvbox-material.nvim": {
-      "rev": "ee006c962780358b8f03eaa918a3139b7c6f0d81",
+      "rev": "e78359d158d946a8f96e27ea34541734b2ab6985",
       "src": "https://github.com/f4z3r/gruvbox-material.nvim"
     },
     "guess-indent.nvim": {
@@ -74,15 +74,15 @@
       "src": "https://github.com/folke/lazydev.nvim"
     },
     "mason-lspconfig.nvim": {
-      "rev": "7b01e2974a47d489bb92f47a41e4c0088ea8f86e",
+      "rev": "0a695750d747db1e7e70bcf0267ef8951c95fc83",
       "src": "https://github.com/williamboman/mason-lspconfig.nvim"
     },
     "mason.nvim": {
-      "rev": "bb639d4bf385a4d89f478b83af4d770be05ab7eb",
+      "rev": "16ba83bfc8a25f52bb545134f5bee082b195c460",
       "src": "https://github.com/williamboman/mason.nvim"
     },
     "mini.nvim": {
-      "rev": "44657837c7338e52727facc85c1d95bec1f6bd7c",
+      "rev": "ff8b3580935818ef2f21bdd651f057a2ae071eab",
       "src": "https://github.com/echasnovski/mini.nvim"
     },
     "neotest": {
@@ -106,7 +106,7 @@
       "src": "https://github.com/hrsh7th/nvim-cmp"
     },
     "nvim-colorizer.lua": {
-      "rev": "5cfe7fffbd01e17b3c1e14af85d5febdef88bd8c",
+      "rev": "664c0b7cea1de71f8b65dfe951b7996fc3e6ccde",
       "src": "https://github.com/catgoose/nvim-colorizer.lua"
     },
     "nvim-dap": {
@@ -122,7 +122,7 @@
       "src": "https://github.com/rcarriga/nvim-dap-ui"
     },
     "nvim-lspconfig": {
-      "rev": "a4ed4e761c400849e8c9f8bda33e5083f890268c",
+      "rev": "ed19590a3a9792901553c388d1aadafce012f80d",
       "src": "https://github.com/neovim/nvim-lspconfig"
     },
     "nvim-nio": {
@@ -135,16 +135,16 @@
       "version": "'main'"
     },
     "nvim-web-devicons": {
-      "rev": "0d7d35fa946837b8738b17c18d1faa1ac351e7f9",
+      "rev": "dfbfaa967a6f7ec50789bead7ef87e336c1fa63c",
       "src": "https://github.com/nvim-tree/nvim-web-devicons"
     },
     "obsidian.nvim": {
-      "rev": "8820505daa28eff1391019e4590d9c4e5fb1d908",
+      "rev": "76545ae41a3af898e607c03224309e15dabb4a26",
       "src": "https://github.com/obsidian-nvim/obsidian.nvim",
       "version": "'main'"
     },
     "oil.nvim": {
-      "rev": "b91ee5a77a6a9605d9c1aaf4fda74b66082c8297",
+      "rev": "b73018b75affd13fa38e2fc94ef753b465f770d7",
       "src": "https://github.com/stevearc/oil.nvim"
     },
     "onedark.nvim": {
@@ -152,7 +152,7 @@
       "src": "https://github.com/navarasu/onedark.nvim"
     },
     "opencode.nvim": {
-      "rev": "3798e7f594c04112fb4ea6f9754520b959c5ed2e",
+      "rev": "f31a1098502eddaaaaead53d96a255bf7b456267",
       "src": "https://github.com/sudo-tee/opencode.nvim"
     },
     "plenary.nvim": {
@@ -164,7 +164,7 @@
       "src": "https://github.com/MeanderingProgrammer/render-markdown.nvim"
     },
     "rustaceanvim": {
-      "rev": "147909fed9f2fd7787c18964d740a5dad84815e8",
+      "rev": "7e13178fd700669a4c1d8fa2d273d25d24fe6fb4",
       "src": "https://github.com/mrcjkb/rustaceanvim"
     },
     "snacks.nvim": {
