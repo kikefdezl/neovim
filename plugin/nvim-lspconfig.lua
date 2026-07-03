@@ -85,7 +85,7 @@ local server_configs = {
     rumdl = {
         settings = {
             rumdl = {
-                lineLength = 100,
+                disable = { "MD013" }, -- line length
             },
         },
     },
