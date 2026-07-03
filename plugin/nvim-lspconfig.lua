@@ -82,6 +82,13 @@ local server_configs = {
             },
         },
     },
+    rumdl = {
+        settings = {
+            rumdl = {
+                lineLength = 100,
+            },
+        },
+    },
 }
 
 for server, config in pairs(server_configs) do

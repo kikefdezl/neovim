@@ -16,15 +16,4 @@ require("opencode").setup {
             ["<A-q>"] = { "quick_chat", mode = { "n", "x" }, help = "[Q]uick chat" },
         },
     },
-    -- System notifications
-    hooks = {
-        on_done_thinking = function()
-            vim.notify("Opencode finished!", vim.log.levels.INFO)
-            vim.fn.system 'notify-send "Opencode" "Done!" --urgency=normal'
-        end,
-        on_permission_requested = function()
-            vim.notify("OpenCode is asking a question", vim.log.levels.WARN)
-            vim.fn.system 'notify-send "OpenCode" "Waiting for your input" --urgency=normal'
-        end,
-    },
 }

@@ -10,7 +10,7 @@ require("conform").setup {
         javascriptreact = { "biome" },
         lua = { "stylua" },
         python = { "ruff_organize_imports", "ruff_format" },
-        markdown = { "prettierd" },
+        markdown = { "rumdl" },
         rust = { "rustfmt" },
         sh = { "shfmt" },
         shell = { "shfmt" },
