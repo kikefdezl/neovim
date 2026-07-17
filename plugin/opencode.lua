@@ -1,7 +1,9 @@
 vim.pack.add {
     "https://github.com/nvim-lua/plenary.nvim",
     "https://github.com/folke/snacks.nvim",
-    "https://github.com/MeanderingProgrammer/render-markdown.nvim",
+
+    -- not a fan of it, prefer to disable
+    -- "https://github.com/MeanderingProgrammer/render-markdown.nvim",
     "https://github.com/sudo-tee/opencode.nvim",
 }
 

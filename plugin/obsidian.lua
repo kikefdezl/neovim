@@ -31,5 +31,5 @@ require("obsidian").setup {
     },
 }
 
-vim.opt.conceallevel = 2
+vim.opt.conceallevel = 0
 vim.keymap.set("n", "<leader>dn", ":Obsidian today<CR>", { desc = "Obsidian [d]aily [n]ote" })
