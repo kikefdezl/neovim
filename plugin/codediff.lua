@@ -4,6 +4,9 @@ vim.cmd.packadd "codediff.nvim"
 require("codediff").setup {
     explorer = {
         view_mode = "tree",
+        line_stats = {
+            enabled = true,
+        },
     },
     keymaps = {
         view = {
