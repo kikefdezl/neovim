@@ -27,7 +27,7 @@ vim.keymap.set("n", "<leader>fd", function()
     picker.files {
         cwd = "~/.dotfiles",
         hidden = true,
-        ignored = true
+        ignored = true,
     }
 end, { desc = "[F]ind in [D]otfiles" })
 
@@ -38,6 +38,9 @@ vim.keymap.set("n", "<leader>sw", picker.grep_word, { desc = "[S]earch current [
 vim.keymap.set("n", "<leader>sg", picker.grep, { desc = "[S]earch by [G]rep" })
 vim.keymap.set("n", "<leader>sx", picker.diagnostics, { desc = "[S]earch Diagnosti[x]" })
 vim.keymap.set("n", "<leader>sr", picker.resume, { desc = "[S]earch [R]esume" })
+vim.keymap.set("n", "<leader>ss", function()
+    Snacks.picker.lsp_workspace_symbols()
+end, { desc = "LSP Symbols" })
 vim.keymap.set("n", "<leader>sn", function()
     picker.grep { cwd = vim.fn.stdpath "config" }
 end, { desc = "[S]earch in [N]eovim files" })
@@ -48,6 +51,4 @@ vim.keymap.set("n", "<leader>s/", function()
     picker.grep_buffers()
 end, { desc = "[S]earch [/] in Open Files" })
 
-
 vim.keymap.set("n", "<leader><leader>", picker.buffers, { desc = "[ ] Find existing buffers" })
-
