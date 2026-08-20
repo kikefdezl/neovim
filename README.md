@@ -8,7 +8,7 @@ These are the files for my own Neovim configuration.
 
 ### 1. Install Neovim
 
-Neovim `>=0.11` is required.
+Neovim `>=0.12` is required.
 
 #### Ubuntu
 
