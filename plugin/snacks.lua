@@ -1,7 +1,10 @@
 vim.pack.add { "https://github.com/folke/snacks.nvim" }
 
 require("snacks").setup {
-    picker = { enabled = true },
+    picker = { enabled = true, matcher = {
+        cwd_bonus = true,
+        frecency = true,
+    } },
 }
 
 local picker = Snacks.picker
@@ -40,6 +43,9 @@ vim.keymap.set("n", "<leader>sx", picker.diagnostics, { desc = "[S]earch Diagnos
 vim.keymap.set("n", "<leader>sr", picker.resume, { desc = "[S]earch [R]esume" })
 vim.keymap.set("n", "<leader>ss", function()
     Snacks.picker.lsp_workspace_symbols()
+end, { desc = "LSP Symbols" })
+vim.keymap.set("n", "<leader>sd", function()
+    Snacks.picker.lsp_definitions()
 end, { desc = "LSP Symbols" })
 vim.keymap.set("n", "<leader>sn", function()
     picker.grep { cwd = vim.fn.stdpath "config" }
