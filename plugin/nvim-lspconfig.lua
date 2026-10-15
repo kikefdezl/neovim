@@ -99,6 +99,5 @@ end
 
 require("mason").setup()
 require("mason-lspconfig").setup {
-    ensure_installed = { "lua_ls", "bashls", "yamlls", "ruff", "ts_ls", "hyprls", "terraformls", "helm_ls" },
     automatic_enable = true,
 }
