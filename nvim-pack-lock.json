@@ -45,6 +45,10 @@
       "rev": "f1e186e44d3b7f9ae918008e2c28ce37c6023d2d",
       "src": "https://github.com/lukas-reineke/indent-blankline.nvim"
     },
+    "lazydev.nvim": {
+      "rev": "ff2cbcba459b637ec3fd165a2be59b7bbaeedf0d",
+      "src": "https://github.com/folke/lazydev.nvim"
+    },
     "mason-lspconfig.nvim": {
       "rev": "00b5473cca4db5b410ff4bae724e3b6e21f2687f",
       "src": "https://github.com/williamboman/mason-lspconfig.nvim"
@@ -99,7 +103,7 @@
       "src": "https://github.com/nvim-tree/nvim-web-devicons"
     },
     "obsidian.nvim": {
-      "rev": "5887208eb7f70d984f1928b4c05d5ef7a212500c",
+      "rev": "de9ac9befaaa47329ba4e2128f2c1a6f0998cb4e",
       "src": "https://github.com/obsidian-nvim/obsidian.nvim",
       "version": "'main'"
     },
@@ -108,7 +112,7 @@
       "src": "https://github.com/stevearc/oil.nvim"
     },
     "opencode.nvim": {
-      "rev": "b5ebc7399e18d2458c9d475836c6dbfef572fafa",
+      "rev": "1ea7efa6fbdab9840665be6a1a0532e5cd50481a",
       "src": "https://github.com/sudo-tee/opencode.nvim"
     },
     "plenary.nvim": {
