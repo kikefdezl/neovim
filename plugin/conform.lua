@@ -9,6 +9,7 @@ require("conform").setup {
         javascript = { "biome" },
         javascriptreact = { "biome" },
         lua = { "stylua" },
+        protobuf = { "buf_ls" },
         python = { "ruff_organize_imports", "ruff_format" },
         rust = { "rustfmt" },
         sh = { "shfmt" },
