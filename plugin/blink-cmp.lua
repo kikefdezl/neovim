@@ -1,10 +1,9 @@
 vim.pack.add {
-    "https://github.com/rafamadriz/friendly-snippets",
-    {
-        src = "https://github.com/saghen/blink.cmp",
-        version = "v1",
-    },
+    "https://github.com/Saghen/blink.lib",
+    "https://github.com/Saghen/blink.cmp",
 }
+
+require("blink.cmp").build():pwait()
 
 require("blink.cmp").setup {
     keymap = { preset = "default" },
