@@ -3,7 +3,7 @@ vim.pack.add {
     "https://github.com/Saghen/blink.cmp",
 }
 
-require("blink.cmp").build():pwait()
+require("blink.cmp").build()
 
 require("blink.cmp").setup {
     keymap = { preset = "default" },
