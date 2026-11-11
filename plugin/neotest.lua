@@ -1,10 +1,15 @@
 vim.pack.add {
+    -- dependencies
     "https://github.com/nvim-lua/plenary.nvim",
     "https://github.com/antoinemadec/FixCursorHold.nvim",
     "https://github.com/nvim-neotest/nvim-nio",
     "https://github.com/nvim-treesitter/nvim-treesitter",
+
+    -- adapters
     "https://github.com/nvim-neotest/neotest-python",
+    "https://github.com/fredrikaverpil/neotest-golang",
     "https://github.com/mrcjkb/rustaceanvim",
+
     "https://github.com/nvim-neotest/neotest",
 }
 
@@ -24,10 +29,18 @@ local python_adapter = require "neotest-python" {
     end,
 }
 
+local go_adapter = require "neotest-golang" {
+    runner = "gotestsum",
+    gotestsum_args = { "--format=standard-verbose" },
+}
+
+local rust_adapter = require "rustaceanvim.neotest"
+
 neotest.setup {
     adapters = {
         python_adapter,
-        require "rustaceanvim.neotest",
+        go_adapter,
+        rust_adapter,
     },
 }
 
@@ -38,7 +51,7 @@ vim.keymap.set("n", "<leader>tr", function()
 end, { desc = "[r]un the nearest [t]est" })
 
 vim.keymap.set("n", "<leader>td", function()
-    neotest.run.run { strategy = "dap" }
+    neotest.run.run { strategy = "dap", suite = false }
 end, { desc = "[d]ebug the nearest [t]est" })
 
 vim.keymap.set("n", "<leader>tf", function()

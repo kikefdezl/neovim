@@ -48,8 +48,12 @@
       "rev": "f1e186e44d3b7f9ae918008e2c28ce37c6023d2d",
       "src": "https://github.com/lukas-reineke/indent-blankline.nvim"
     },
+    "lazydev.nvim": {
+      "rev": "ff2cbcba459b637ec3fd165a2be59b7bbaeedf0d",
+      "src": "https://github.com/folke/lazydev.nvim"
+    },
     "mason-lspconfig.nvim": {
-      "rev": "3a5cd6d562a01f6829a35ae761dc383264ea452b",
+      "rev": "97ccf96bb2e7adb5f82975068bd4c7307d2afa8a",
       "src": "https://github.com/williamboman/mason-lspconfig.nvim"
     },
     "mason.nvim": {
@@ -57,12 +61,16 @@
       "src": "https://github.com/williamboman/mason.nvim"
     },
     "mini.nvim": {
-      "rev": "a321b535c75ca88ba7fddfd8eb5b583fbda50dd6",
+      "rev": "f9ac12d7cbd2563cfc2cce9a8152fc8df2ad0d6f",
       "src": "https://github.com/echasnovski/mini.nvim"
     },
     "neotest": {
       "rev": "27bf921498043f7ecd821d6db68d05de244bbd02",
       "src": "https://github.com/nvim-neotest/neotest"
+    },
+    "neotest-golang": {
+      "rev": "65b2be63c3de00e6f15c05388ebdc8d603dbd727",
+      "src": "https://github.com/fredrikaverpil/neotest-golang"
     },
     "neotest-python": {
       "rev": "1b56ca4ba51c6014f986d6548ee629bdc95589d1",
@@ -81,7 +89,7 @@
       "src": "https://github.com/rcarriga/nvim-dap-ui"
     },
     "nvim-lspconfig": {
-      "rev": "d5c7e7bcc15bccc01bf1601a03473e10de2f0f7e",
+      "rev": "443d92c6bea761ab54cdde46fb197a2b4d614bdd",
       "src": "https://github.com/neovim/nvim-lspconfig"
     },
     "nvim-nio": {
@@ -89,7 +97,7 @@
       "src": "https://github.com/nvim-neotest/nvim-nio"
     },
     "nvim-treesitter": {
-      "rev": "915f2bd3d4e2a33704bfc476b5137e9befa82f3d",
+      "rev": "19bdfc04f40ed2ccb3340591d125f759b0406875",
       "src": "https://github.com/nvim-treesitter/nvim-treesitter",
       "version": "'main'"
     },
@@ -98,7 +106,7 @@
       "src": "https://github.com/nvim-tree/nvim-web-devicons"
     },
     "obsidian.nvim": {
-      "rev": "15af492b64f4677959fe95008f1d5b782fe1f86a",
+      "rev": "aa8a8e06594e8659c439e576e5ffc04193a33d5a",
       "src": "https://github.com/obsidian-nvim/obsidian.nvim",
       "version": "'main'"
     },
@@ -119,7 +127,7 @@
       "src": "https://github.com/kikefdezl/ripdrag.nvim"
     },
     "rustaceanvim": {
-      "rev": "3532a307451beceb090f0f19e2659558d5fa20fa",
+      "rev": "9003bfbecb9f5e47c83e30d0af09a75dcc431c34",
       "src": "https://github.com/mrcjkb/rustaceanvim"
     },
     "snacks.nvim": {
@@ -127,7 +135,7 @@
       "src": "https://github.com/folke/snacks.nvim"
     },
     "telescope.nvim": {
-      "rev": "40aedd8a68c78a656a10a8d62d80c54af59420fb",
+      "rev": "1e1bab730218eaf97fce743be3f56e51075928ac",
       "src": "https://github.com/nvim-telescope/telescope.nvim"
     },
     "todo-comments.nvim": {
