@@ -30,6 +30,9 @@ local python_adapter = require "neotest-python" {
 }
 
 local go_adapter = require "neotest-golang" {
+    go_test_args = function()
+        return { "-v" }
+    end,
     runner = "gotestsum",
     gotestsum_args = { "--format=standard-verbose" },
 }
