@@ -21,7 +21,7 @@
       "src": "https://github.com/catppuccin/nvim"
     },
     "codediff.nvim": {
-      "rev": "09d9ebef2cc5a5c04db7a349cd6c61bdf84ecc8e",
+      "rev": "f92e594f28f25aa2ab631067417e787346c5d5eb",
       "src": "https://github.com/esmuellert/codediff.nvim"
     },
     "conform.nvim": {
@@ -37,7 +37,7 @@
       "src": "https://github.com/j-hui/fidget.nvim"
     },
     "gitsigns.nvim": {
-      "rev": "ef707fb93301a9b856f36eae4c8f56f5b988a794",
+      "rev": "dc7698f932792a764d3db95fedee26c38e728355",
       "src": "https://github.com/lewis6991/gitsigns.nvim"
     },
     "guess-indent.nvim": {
@@ -61,7 +61,7 @@
       "src": "https://github.com/williamboman/mason.nvim"
     },
     "mini.nvim": {
-      "rev": "f9ac12d7cbd2563cfc2cce9a8152fc8df2ad0d6f",
+      "rev": "4d32e018f7cfcc0ba95357465516be615c542fef",
       "src": "https://github.com/echasnovski/mini.nvim"
     },
     "neotest": {
@@ -97,7 +97,7 @@
       "src": "https://github.com/nvim-neotest/nvim-nio"
     },
     "nvim-treesitter": {
-      "rev": "19bdfc04f40ed2ccb3340591d125f759b0406875",
+      "rev": "60c0f468de3e636fa660a419d537e8033aca4e39",
       "src": "https://github.com/nvim-treesitter/nvim-treesitter",
       "version": "'main'"
     },
@@ -114,10 +114,6 @@
       "rev": "d3733d933833a0e59b813ecec99341527adf0c28",
       "src": "https://github.com/stevearc/oil.nvim"
     },
-    "opencode.nvim": {
-      "rev": "0dbd52d84e85023742ea999456b8804a987cac43",
-      "src": "https://github.com/sudo-tee/opencode.nvim"
-    },
     "plenary.nvim": {
       "rev": "74b06c6c75e4eeb3108ec01852001636d85a932b",
       "src": "https://github.com/nvim-lua/plenary.nvim"
@@ -127,7 +123,7 @@
       "src": "https://github.com/kikefdezl/ripdrag.nvim"
     },
     "rustaceanvim": {
-      "rev": "9003bfbecb9f5e47c83e30d0af09a75dcc431c34",
+      "rev": "05e9bf206b1bbd6317d4a0a76acc20049995761b",
       "src": "https://github.com/mrcjkb/rustaceanvim"
     },
     "snacks.nvim": {
