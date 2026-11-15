@@ -21,7 +21,7 @@
       "src": "https://github.com/catppuccin/nvim"
     },
     "codediff.nvim": {
-      "rev": "f92e594f28f25aa2ab631067417e787346c5d5eb",
+      "rev": "eee54e78e6f152a6eb03b090e95f7576c96a5ad9",
       "src": "https://github.com/esmuellert/codediff.nvim"
     },
     "conform.nvim": {
@@ -29,7 +29,7 @@
       "src": "https://github.com/stevearc/conform.nvim"
     },
     "dropbar.nvim": {
-      "rev": "f7c6fa21e2a7c32576e7a1791774a3736987f467",
+      "rev": "75df03973f3a06a85300bc8ca1f9f68e935cb78e",
       "src": "https://github.com/Bekaboo/dropbar.nvim"
     },
     "fidget.nvim": {
@@ -61,7 +61,7 @@
       "src": "https://github.com/williamboman/mason.nvim"
     },
     "mini.nvim": {
-      "rev": "4d32e018f7cfcc0ba95357465516be615c542fef",
+      "rev": "174eb9b9d5d66254966b9d52ea51b996317e51f6",
       "src": "https://github.com/echasnovski/mini.nvim"
     },
     "neotest": {
@@ -89,7 +89,7 @@
       "src": "https://github.com/rcarriga/nvim-dap-ui"
     },
     "nvim-lspconfig": {
-      "rev": "443d92c6bea761ab54cdde46fb197a2b4d614bdd",
+      "rev": "05588aab66016c6836634b87ca2d392d097515f2",
       "src": "https://github.com/neovim/nvim-lspconfig"
     },
     "nvim-nio": {
@@ -97,7 +97,7 @@
       "src": "https://github.com/nvim-neotest/nvim-nio"
     },
     "nvim-treesitter": {
-      "rev": "60c0f468de3e636fa660a419d537e8033aca4e39",
+      "rev": "04f17886f75416dfdc25374c950a52c63f0e98fe",
       "src": "https://github.com/nvim-treesitter/nvim-treesitter",
       "version": "'main'"
     },
@@ -106,7 +106,7 @@
       "src": "https://github.com/nvim-tree/nvim-web-devicons"
     },
     "obsidian.nvim": {
-      "rev": "aa8a8e06594e8659c439e576e5ffc04193a33d5a",
+      "rev": "f5fb6b7f5dab4a61ff605a150ef0b8f2391fb458",
       "src": "https://github.com/obsidian-nvim/obsidian.nvim",
       "version": "'main'"
     },
@@ -123,7 +123,7 @@
       "src": "https://github.com/kikefdezl/ripdrag.nvim"
     },
     "rustaceanvim": {
-      "rev": "05e9bf206b1bbd6317d4a0a76acc20049995761b",
+      "rev": "5b5593c95b1de7deea348b7974d93de770390602",
       "src": "https://github.com/mrcjkb/rustaceanvim"
     },
     "snacks.nvim": {
